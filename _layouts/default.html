@@ -7,7 +7,7 @@
         <title>{{ page.title }}</title>
     </head>
     <body>
-        Tags: {{ page.tags }}
+        {% if page.title != 'Index'%} Tags: {{ page.tags | join: ", " }} {% endif %}
 
         {{ content }}
 
